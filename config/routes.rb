@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   resources :users
 
-  get 'sign_up' => 'users#new', as :sign_up
+  get 'sign_up' => 'users#new', as: :sign_up
 
   root 'users#index'
   # The priority is based upon order of creation: first created -> highest priority.
