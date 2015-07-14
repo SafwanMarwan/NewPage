@@ -8,4 +8,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :pages
+
+  enum access_level: [:visitor, :member, :admin]
 end
