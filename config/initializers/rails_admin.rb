@@ -2,8 +2,14 @@ RailsAdmin.config do |config|
 
   ### Popular gems integration
 
+  # Default Use
   config.authorize_with do
-    redirect_to main_app.root_path unless current_user.role == "admin"
+    # user ||= User.new # guest user (not logged in)
+    if user_signed_in?
+      redirect_to main_app.root_path unless current_user.role == "admin"
+    else
+      redirect_to main_app.root_path
+    end
   end
 
   ## == Devise ==
@@ -12,7 +18,7 @@ RailsAdmin.config do |config|
   # end
   # config.current_user_method(&:current_user)
 
-  ## == Cancan ==
+  # # == Cancan ==
   # config.authorize_with :cancan
 
   ## == PaperTrail ==
