@@ -7,14 +7,21 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= render 'layouts/header' %>
-  <div class="container">
-  <%= flash_messages %>
-	<%# flash.each do |name, msg| -%>
-	<%#= content_tag :div, msg, class: name %>
-	<%# end -%>
+  <%= render 'share/header' %>
+    <%#= flash_messages %>
+  	<%# flash.each do |name, msg| -%>
+  	<%#= content_tag :div, msg, class: name %>
+  	<%# end -%>
 
-<%= yield %>
-  </div>
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+
+    <div class="col-xs-14 col-xs-offset-1">
+      <%= yield %>
+    </div>
 </body>
 </html>

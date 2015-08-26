@@ -16,6 +16,8 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 # Use devise
 gem 'devise'
+# Use cancancan
+gem 'cancancan'
 # Admin panel using rails_admin
 gem 'rails_admin'
 
