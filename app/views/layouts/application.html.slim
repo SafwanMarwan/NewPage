@@ -1,0 +1,30 @@
+doctype html
+
+html
+
+  head
+    title NewPage
+
+    = stylesheet_link_tag \    
+      "application",
+      "data-turbolinks-track"
+
+    = javascript_include_tag \
+      "application",
+      "data-turbolinks-track"
+
+    = csrf_meta_tags
+
+  body
+    == render 'share/header'
+
+    - if notice
+      p class="alert alert-success"
+        = notice
+
+    - if alert
+      p class="alert alert-danger"
+        = alert
+
+    div class="col-xs-14 col-xs-offset-1"
+      = yield

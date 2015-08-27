@@ -57,3 +57,6 @@ gem 'rack-contrib'
 gem 'grape-swagger'
 gem 'grape-swagger-rails'
 
+# Use slim-lang
+gem 'slim'
+

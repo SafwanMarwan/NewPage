@@ -1,0 +1,36 @@
+nav.navbar.navbar-default
+
+  div.container-fluid
+
+    div.navbar-header
+
+      button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"
+
+        span.icon-bar
+          Toggle navigation
+
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+
+      a.navbar-brand href="/" NewPage
+
+    div.collapse.navbar-collapse#bs-example-navbar-collapse-1
+
+      form.navbar-form.navbar-left role="search"
+
+        div.form-group
+          input.form-control type="text" placeholder="Search"
+
+        button.btn.btn-default type="submit" Submit
+
+      ul.nav.navbar-nav.navbar-right
+
+        li class="<%= 'active' if current_page?(users_path) %>" = link_to "Participants", users_path
+        - if user_signed_in?
+          li class="<%= 'active' if current_page?(user_path(id: current_user.id)) %>" = link_to "Profile", user_path(id: current_user.id)
+          li class="<%= 'active' if current_page?(destroy_user_session_path) %>" = link_to "Sign Out", destroy_user_session_path, method: :delete
+          
+        - else
+          li class="<%= 'active' if current_page?(new_user_session_path) %>" = link_to "Log In", new_user_session_path
+          li class="<%= 'active' if current_page?(new_user_registration_path) %>" = link_to "Sign Up", new_user_registration_path
