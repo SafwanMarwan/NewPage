@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   
+  # API+API Documentation
+  mount API => '/'
+  mount GrapeSwaggerRails::Engine => '/documentation'
+
   devise_for :users
   resources :users
   resources :pages

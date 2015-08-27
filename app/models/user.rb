@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   before_create :setup_default_role_for_new_users
   
   # validates :name, presence: true
-  # validates :email, presence: true, format: { with: /\A\S+@\S+\.\S+\z/, message: 'invalid format' }
+  # validates :email, presence: true, format: { with: /\A\S+@\S+\.\S+\z/, message: 'invalid format' } :ereoeiroersoo "adskjghjsdh"
 
   has_many :pages
 

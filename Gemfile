@@ -50,3 +50,10 @@ group :development, :test do
   gem 'spring'
 end
 
+# Use Grape for rails API
+gem 'grape'
+gem 'grape-entity'
+gem 'rack-contrib'
+gem 'grape-swagger'
+gem 'grape-swagger-rails'
+
