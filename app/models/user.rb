@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
 
   has_many :pages
 
+
   ROLES = %w[admin general]
 
   private

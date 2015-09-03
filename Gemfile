@@ -14,6 +14,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+
 # Use devise
 gem 'devise'
 # Use cancancan
@@ -59,4 +60,3 @@ gem 'grape-swagger-rails'
 
 # Use slim-lang
 gem 'slim'
-
