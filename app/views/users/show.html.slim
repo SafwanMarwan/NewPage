@@ -1,0 +1,9 @@
+h2
+	= current_user.name
+p 
+	Email:
+	= current_user.email
+p
+	= link_to "Edit Profile", edit_user_registration_path
+	or
+	= link_to "Remove Your Account", edit_user_registration_path

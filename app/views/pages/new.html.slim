@@ -1,0 +1,19 @@
+div.row
+	h3 Create your post
+
+	- form_for :pages do |p|
+		div.input-group.col-xs-6
+			span.input-group-addon
+				= p.label :title
+			= p.text_field :title, class: "form-control" , placeholder: "Title"
+
+	div.input-group.col-xs-6
+		span.input-group-addon
+			= p.label :post
+			= p.text_area :post, :size => 150, class: "form-control" , placeholder: "Post"
+
+br
+
+div.row
+	div.input-group.col-xs-3
+		= p.submit class: "btn btn-default"

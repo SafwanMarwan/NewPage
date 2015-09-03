@@ -1,0 +1,7 @@
+h1 Users List
+
+ul
+    - @user.each do |user|
+    li
+        span
+        	= link_to user.name, user_path(id: user.id)
